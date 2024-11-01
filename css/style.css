@@ -1,0 +1,395 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+/*  Body Style */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'ubuntu', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Header with  Left and Right box */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+    background-color: rgba(0, 0, 0, 0.279); 
+}
+
+/* Left Section (Bookish) */
+.left-section h1 {
+    color: #fff;
+    font-size: 36px;
+    margin-left: 40px; 
+    transition: color 0.3s ease;
+}
+
+.left-section h1:hover {
+    color: #ffffff; 
+}
+
+/* Right Section (Explore Link) */
+.right-section .explore-link {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin-right: 40px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.right-section .explore-link:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* Background Image Style */
+.background-image {
+    background-image: url('../images/star2.jpg'); 
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+/* Text Overlay on the Background */
+.overlay-text h2 {
+    color: #fff;
+    font-size: 40px;
+   /* background-color: rgba(0, 0, 0, 0.099); */ 
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Responsive Styles for Smaller Devices */
+@media (max-width: 768px) {
+    .left-section h1 {
+        font-size: 28px;
+        margin-left: 20px; 
+    }
+
+    .right-section .explore-link {
+        font-size: 16px;
+        padding: 8px 15px;
+        margin-right: 20px; 
+    }
+
+    .overlay-text h2 {
+        font-size: 32px;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-section h1 {
+        font-size: 24px;
+    }
+
+    .right-section .explore-link {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .overlay-text h2 {
+        font-size: 24px;
+        padding: 10px 15px;
+    }
+}
+
+
+
+/*search section*/
+ 
+ /* Particle.js container */
+ .particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+ }
+ 
+ /* Search Container */
+ .search-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    /*background: rgba(72, 16, 88, 0.1);*/
+    /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);*/
+    margin-top: 20px;
+ }
+ 
+ /* Paragraph above the search box */
+ .search-paragraph {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'ubuntu', sans-serif;
+ }
+ 
+ /* Search box styling */
+ .search-box {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+ }
+ 
+ /* Search box hover effect */
+ .search-box:hover {
+    background: rgba(197, 184, 205, 0.2);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+ }
+ 
+ /* Book icon styling */
+ .book-icon {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: color 0.3s, transform 0.3s;
+ }
+ 
+ /* Book icon hover effect */
+ .book-icon:hover {
+    color: #b4cae0;
+    transform: scale(1.1);
+ }
+ 
+ /* Tooltip on hover */
+ .book-icon:hover::after {
+    content: "Click to explore books!";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #A5847D;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+ }
+ 
+
+
+ /* For devices with a max-width of 768px (tablets and smaller screens) */
+@media (max-width: 768px) {
+    .search-container {
+       max-width: 90%; 
+       padding: 20px 10px; 
+    }
+ 
+    .search-paragraph {
+       font-size: 18px; 
+    }
+ 
+    .search-box {
+       padding: 10px; 
+       font-size: 14px;
+    }
+ 
+    .book-icon {
+       font-size: 28px; 
+       margin-top: 10px;
+    }
+ }
+ 
+ /* For devices with a max-width of 480px (small mobile screens) */
+ @media (max-width: 480px) {
+    .search-container {
+       padding: 15px 5px; 
+    }
+ 
+    .search-paragraph {
+       font-size: 16px; 
+    }
+ 
+    .search-box {
+       padding: 8px;
+       font-size: 12px;
+    }
+ 
+    .book-icon {
+       font-size: 24px; /* Smaller icon */
+       margin-top: 8px;
+    }
+ }
+
+ /* new settler*/
+
+ /* Subscription section styling */
+.subscription-section {
+   background-color: #ede5ee; /* Light background color */
+   padding: 40px 20px;
+   text-align: center;
+}
+
+.subscription-heading {
+   font-size: 28px;
+   color: #333;
+   margin-bottom: 20px;
+   font-family: 'ubuntu', sans-serif;
+}
+
+/* Form container */
+.subscription-form {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+
+/* Input boxes */
+.input-box {
+   padding: 10px;
+   font-size: 16px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   width: 200px;
+   transition: all 0.3s;
+}
+
+.input-box:focus {
+   border-color: #B39388;
+}
+
+/* Subscribe button */
+.subscribe-button {
+   padding: 10px 20px;
+   font-size: 16px;
+   color: #fff;
+   background-color: #514455;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+   background-color: #A5847D;
+}
+
+/* Subscription message */
+.subscription-message {
+   margin-top: 20px;
+   font-size: 16px;
+   color: rgb(83, 21, 63);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+   .input-box {
+      width: 45%;
+   }
+   .subscription-form {
+      gap: 5px;
+   }
+}
+
+@media (max-width: 480px) {
+   .input-box {
+      width: 100%;
+   }
+   .subscription-form {
+      flex-direction: column;
+      gap: 10px;
+   }
+}
+
+/*footer section*/
+
+/* Footer section styling */
+.footer-section {
+   background-color: #000;
+   color: #fff;
+   text-align: center;
+   padding: 40px 20px;
+   font-family: Arial, sans-serif;
+}
+
+/* Footer links styling */
+.footer-links {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 15px;
+   margin-bottom: 20px;
+}
+
+.footer-links a {
+   color: #ccc;
+   text-decoration: none;
+   font-size: 14px;
+   transition: color 0.3s;
+}
+
+.footer-links a:hover {
+   color: #ad98c3;
+}
+
+/* Social media icons styling */
+.footer-social {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   margin-bottom: 20px;
+}
+
+.footer-social a img {
+   width: 24px;
+   height: 24px;
+   /*filter: invert(1); 
+   /*transition: filter 0.3s, transform 0.3s;*/
+}
+
+.footer-social a:hover img {
+   filter: invert(0.7); 
+   transform: scale(1.1); 
+}
+
+/* Footer copyright */
+.footer-copyright {
+   font-size: 12px;
+   color: #888;
+   margin-top: 20px;
+   line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+   .footer-links a, .footer-social a img {
+      font-size: 12px;
+   }
+}
+
+@media (max-width: 480px) {
+   .footer-links {
+      gap: 10px;
+   }
+   .footer-social {
+      gap: 10px;
+   }
+}
